@@ -22,7 +22,8 @@ SECRET_KEY = 'django-insecure--(r5q6#hov$@d)ro!)^t!+u0c!y)+e1=06zwbdkkhxtz#utz(j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []   # En producción debes poner tu dominio o '*'
+ALLOWED_HOSTS = ['tienda-django-mpsn.onrender.com', 'localhost', '127.0.0.1']
+   # En producción debes poner tu dominio o '*'
 
 # Application definition
 INSTALLED_APPS = [

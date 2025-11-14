@@ -1,0 +1,18 @@
+body {
+  background-color: #f5f7fa;
+}
+
+.card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.navbar-brand {
+  font-size: 1.3rem;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

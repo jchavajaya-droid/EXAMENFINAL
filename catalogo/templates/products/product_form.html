@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ object|default:"Agregar" }} producto{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h2 class="fw-bold mb-3">
+      {% if object %}Editar producto{% else %}Agregar producto{% endif %}
+    </h2>
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      {% for field in form %}
+        <div class="mb-3">
+          <label class="form-label">{{ field.label }}</label>
+          {{ field }}
+          <div class="text-danger small">{{ field.errors }}</div>
+        </div>
+      {% endfor %}
+
+      <button class="btn btn-primary">Guardar</button>
+      <a class="btn btn-secondary" href="{% url 'catalogo:producto_lista' %}">Cancelar</a>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="p-5 bg-white rounded shadow-sm">
+  <h1 class="fw-bold mb-3">Bienvenido a la Tienda Online</h1>
+  <p class="lead">Explora nuestros productos y categorías disponibles.</p>
+  <a href="{% url 'catalogo:producto_lista' %}" class="btn btn-primary btn-lg mt-3">
+    Ver productos
+  </a>
+</div>
+{% endblock %}
